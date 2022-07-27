@@ -4,7 +4,6 @@ let canvas=document.getElementById("playable_screen");
 let context=canvas.getContext("2d");
 
 let game = new Game(canvas.width,canvas.height,context);
-game.start();
 
 let lastTime =0;
 
