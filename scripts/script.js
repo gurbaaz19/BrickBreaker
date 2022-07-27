@@ -1,15 +1,10 @@
-import Paddle from "./paddle.js";
-import InputHandler from "./input.js";
-import Ball from "./ball.js";
+import Game from "./game.js";
 
 let canvas=document.getElementById("playable_screen");
 let context=canvas.getContext("2d");
 
-let paddle= new Paddle(canvas.width,canvas.height,context);
-let ball= new Ball(context);
-new InputHandler(paddle);
-
-paddle.draw();
+let game = new Game(canvas.width,canvas.height,context);
+game.start();
 
 let lastTime =0;
 
@@ -18,9 +13,9 @@ function gameLoop(timeStamp){
     lastTime=timeStamp;
 
     context.clearRect(0,0,canvas.width,canvas.height);
-    paddle.update(changeInTime);
-    paddle.draw();
-    ball.draw();
+
+    game.update(changeInTime);
+    game.draw();
 
     requestAnimationFrame(gameLoop);
 }

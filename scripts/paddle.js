@@ -1,8 +1,8 @@
 export default class Paddle {
-    constructor(gameWidth, gameHeight, context) {
+    constructor(game) {
         //dimensions
-        this.gameWidth = gameWidth;
-        this.gameHeight = gameHeight;
+        this.gameWidth = game.gameWidth;
+        this.gameHeight = game.gameHeight;
         this.width = 120;
         this.height = 30;
 
@@ -10,11 +10,11 @@ export default class Paddle {
         this.speed = 0;
 
         this.position = {
-            x: gameWidth / 2 - this.width / 2,
-            y: gameHeight - this.height - 10
+            x: this.gameWidth / 2 - this.width / 2,
+            y: this.gameHeight - this.height - 10
         };
 
-        this.context = context;
+        this.context = game.context;
     }
 
     moveLeft() {
@@ -31,8 +31,12 @@ export default class Paddle {
 
 
     draw() {
-        this.context.fillStyle = "#c02727";
+        let gradient = this.context.createLinearGradient(this.position.x, this.position.y, this.position.x+this.width, this.position.y+this.height);
+        gradient.addColorStop(1, "#c02727");
+        gradient.addColorStop(0, "#851b1b");
+        this.context.fillStyle= gradient;
         this.context.fillRect(this.position.x, this.position.y, this.width, this.height);
+
     }
 
     update(changeInTime) {
