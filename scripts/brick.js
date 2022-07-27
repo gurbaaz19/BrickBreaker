@@ -6,8 +6,8 @@ export default class Brick {
         this.context = game.context;
         this.game = game;
         this.position = position;
-        this.width = 40;
-        this.height = 40;
+        this.width = 80;
+        this.height = 80;
 
         this.toBeDeleted = false;
     }

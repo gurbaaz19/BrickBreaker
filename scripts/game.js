@@ -21,7 +21,7 @@ export default class Game {
         this.paddle = new Paddle(this);
         this.gameObjects = [];
         this.bricks = [];
-        this.chances = 3;
+        this.chances = 1;
 
         this.stages = [STAGE_1, STAGE_2, STAGE_3];
         this.currentStage = 0;
