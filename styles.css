@@ -1,0 +1,19 @@
+body{
+    background-color: black;
+}
+
+img{
+    display: none;
+}
+
+#playable_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#playable_screen{
+    margin: 8%;
+    border: darkblue solid 10px;
+    background-color: dodgerblue;
+}
