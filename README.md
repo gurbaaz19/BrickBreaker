@@ -1,5 +1,5 @@
 # BrickBreaker
-Basic Brick Breaker game written in Vanilla JavaScript.
+Brick Breaker Game written in Vanilla JavaScript.
 
 <img src="README_ASSETS/1.png"></img>
 <img src="README_ASSETS/2.png"></img>
